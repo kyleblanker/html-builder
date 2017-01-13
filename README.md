@@ -20,13 +20,24 @@ $builder = new \KyleBlanker\HtmlBuilder\Builder();
 $element = $builder->element('p','Hello World')->attribute('style','color: #ff0000');
 ```
 
-### Nesting Elements
+### Nesting elements
 ```PHP
 $builder = new \KyleBlanker\HtmlBuilder\Builder();
 
 $element = $builder->element('div')->nest(function($builder){
     $builder->element('p','This element is nested');
 });
+```
+
+### Adding child elements
+```PHP
+$builder = new \KyleBlanker\HtmlBuilder\Builder();
+
+$parent = $builder->element('div');
+
+$childElement = $builder->element('p');
+
+$parent->child($childElement);
 ```
 
 ### Creating an html document

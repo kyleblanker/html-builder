@@ -113,11 +113,11 @@ class Element
     }
 
     /**
-     * Adds an element that will be nested to the array
+     * Adds a child element
      * @param Element $element
      * @return Element
      */
-    public function element(Element $element)
+    public function child(Element $element)
     {
         if($this->void)
         {

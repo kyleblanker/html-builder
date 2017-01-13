@@ -63,8 +63,8 @@ class Document
      */
     public function build()
     {
-        $this->html->element($this->head);
-        $this->html->element($this->body);
+        $this->html->child($this->head);
+        $this->html->child($this->body);
 
         return $this->doctype . PHP_EOL . $this->html->render();
     }

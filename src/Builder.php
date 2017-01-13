@@ -27,7 +27,7 @@ class Builder
 
         if($this->nestElement instanceof Element)
         {
-            $this->nestElement->element($element);
+            $this->nestElement->child($element);
         }
 
         return $element;
